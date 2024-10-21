@@ -1,0 +1,144 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Sports Scoreboard Registration Form
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+    link(rel="stylesheet" href="/assets/css/registration.css")
+
+  body
+    header
+      nav
+        .logo
+          img(src="./assets/images/logo.jpg" alt="Logo Image")
+          h2 LIVE SPORTS SCOREBOARD
+        ul
+          li
+            a(href="/register") Sign In
+          li
+            a(href="/login") Login
+
+    main
+      .wrapper
+        form#registrationForm(action="/user/register" method="post")
+          h1 Registration
+          fieldset
+            legend Personal Information
+            .input
+              div
+                i(class="fas fa-user")
+                input(type="text" id="firstname" name="firstname" placeholder="Firstname" required)
+              span.error#firstnameError
+              div
+                i(class="fas fa-user")
+                input(type="text" id="lastname" name="lastname" placeholder="Lastname" required)
+              span.error#lastnameError
+              div
+                i(class="fas fa-user")
+                input(type="text" id="username" name="username" placeholder="Username" required)
+              span.error#usernameError
+              div
+                i(class="fas fa-envelope")
+                input(type="email" id="email" name="email" placeholder="Email" required)
+              span.error#emailError
+              div
+                i(class="fas fa-lock")
+                input(type="password" id="password" name="password" placeholder="Password" required)
+              span.error#passwordError
+              div
+                i(class="fas fa-lock")
+                input(type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required)
+              span.error#confirmPasswordError
+              div
+                i(class="fas fa-phone")
+                input(type="tel" id="mobile" placeholder="Mobile Number" name="mobile")
+              span.error#mobileError
+              div
+                i(class="fas fa-calendar")
+                input(type="date" id="dob" name="dob" required)
+
+          fieldset
+            legend Favorites
+            .input
+              label(for="favorite_sports") Favorite Sports
+              .option
+                select#favorite_sports(name="favorite_sports" required)
+                  option(value="football") Football
+                  option(value="cricket") Cricket
+                  option(value="basketball") Basketball
+                  option(value="tennis") Tennis
+              label(for="favorite_team") Favorite Player
+              div
+                i(class="fas fa-users")
+                input(type="text" id="favoritePlayer" placeholder="Favorite Player" name="favoritePlayer")
+                button(type="submit" id="add-player") Add
+            ul#player-list
+
+          fieldset
+            legend Gender
+            .gender-btn-group
+              .gender-options
+                input(type="radio" id="male" name="gender" value="male")
+                label(for="male") Male
+                input(type="radio" id="female" name="gender" value="female")
+                label(for="female") Female
+
+          fieldset
+            legend Location
+            .input
+              label(for="country") Country
+              .option
+                select#country(name="country" required)
+                  option(value="usa") USA
+                  option(value="india") India
+                  option(value="uk") UK
+                  option(value="australia") Australia
+
+          .form-group
+            label
+              input(type="checkbox" id="terms" required)
+              | I agree to the Terms and Conditions
+
+          .btn-group
+            button(type="submit" class="btn") Submit
+            button(type="reset" class="btn") Reset
+
+          .login
+            p Already have an account? 
+              a(href="/login") Login
+
+    footer
+      .footer-container
+        .footer-column
+          h3 Quick Links
+          ul
+            li
+              a(href="/index") Home
+            li
+              a(href="/teams") Teams
+            li
+              a(href="/fixtures") Fixtures
+            li
+              a(href="/scores") Live Scores
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              i(class="fab fa-facebook")
+            a(href="#")
+              i(class="fab fa-twitter")
+            a(href="#")
+              i(class="fab fa-instagram")
+            a(href="#")
+              i(class="fab fa-youtube")
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Stay updated with the latest scores and news!
+          form(action="" method="")
+            input(type="email" name="email" placeholder="Enter your email" required)
+            button(type="submit") Subscribe
+      .copyright
+        p &copy; 2024 Live Sports Scoreboard. All rights reserved.
+
+    script(src="./assets/js/register.js")

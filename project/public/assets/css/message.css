@@ -1,0 +1,292 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+header {
+    background-color: white;
+    color: black;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%; 
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and text */
+    margin-left: 15px; 
+}
+
+.logo img {
+    width: 100px; 
+    height: 70px; 
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+.logo h2 {
+    font-size: 1.5rem;
+    color: black;
+    word-wrap: break-word;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-left: 20px;
+    padding: 10px 15px;
+}
+
+nav ul li a {
+    font-size: 18px;
+    font-family: 'Gowun Batang', cursive;
+    color: #384B70;
+    padding: 10px 20px;
+    border: 2px solid #9393ff; 
+    border-radius: 10px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+header nav ul li a:hover {
+    color: #fff; 
+    background-color: #55679C; 
+    border-color: #007BFF; 
+}
+/* footer */
+footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Allow wrapping of columns on smaller screens */
+}
+
+.footer-column {
+    flex: 1;
+    margin: 20px;
+    text-align: center; /* Center the content */
+}
+
+.footer-column h3 {
+    margin: 0 0 15px; /* Space below heading */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 10px 0; /* Space between list items */
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.footer-column ul li a:hover {
+    color: #007bff; /* Change text color on hover */
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 30px; /* Increased icon size */
+    transition: transform 0.3s; /* Smooth transition for social icons */
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+.social-icons .fa-facebook:hover {
+    color: #3b5998; /* Facebook blue */
+}
+
+.social-icons .fa-twitter:hover {
+    color: #1da1f2; /* Twitter blue */
+}
+
+.social-icons .fa-instagram:hover {
+    color: #c32aa3; /* Instagram pink */
+}
+
+.social-icons .fa-youtube:hover {
+    color: #ff0000; /* YouTube red */
+}
+
+.newsletter {
+    margin-top: 20px; /* Space above newsletter section */
+}
+
+.newsletter input[type="email"] {
+    padding: 10px; /* Padding for input */
+    margin-bottom: 20px; /* Increased space between input and button */
+    width: 100%; /* Make email input responsive */
+    max-width: 300px; /* Limit maximum width */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px;
+}
+
+.newsletter button {
+    padding: 12px 0px; /* Button padding */
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.newsletter button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.success-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f0f0f0; /* Light background */   
+}
+
+.success-container {
+    text-align: center;
+    background-color: #fff; /* White background for the container */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.success-container h1 {
+    font-size: 3rem;
+    color: #D91656; /* Pinkish Red */
+    margin-bottom: 20px;
+}
+
+.success-container p {
+    font-size: 1.5rem;
+    color: #640D5F; /* Dark Purple */
+    margin-bottom: 20px;
+}
+
+.success-container img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.success-link {
+    padding: 10px 20px;
+    background-color: #28A745; /* Green */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.success-link:hover {
+    background-color: #155724; /* Darker Green on hover */
+}
+
+
+
+/* Countdown Message */
+#countdown {
+    font-size: 1.25rem; /* Slightly smaller than the success message */
+    color: #640D5F; /* Dark Purple */
+    margin-top: 20px; /* Space above the countdown */
+}
+
+/* error */
+.error-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full viewport height */
+    background-color: #eaeff5; /* Light blue-gray background */
+    margin-top: 100px;
+}
+
+.error-container {
+    width: 500px;
+    text-align: center;
+    background-color: #ffffff; /* Pure white container */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Softer shadow with less intensity */
+    margin: 30px auto;
+}
+
+.error-container h2 {
+    font-size: 3rem;
+    color: #ff6b6b; /* Light coral red for the heading */
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: #555e6c; /* Darker, soft gray for the message */
+    margin-bottom: 50px;
+}
+
+.error-link {
+    padding: 12px 24px;
+    background-image: linear-gradient(135deg, #ff4e50, #fc913a); /* Red to orange gradient */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; /* Rounded button */
+    transition: background-image 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth to the button */
+}
+
+.error-link:hover {
+    background-image: linear-gradient(135deg, #d43e3a, #fda92c); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+

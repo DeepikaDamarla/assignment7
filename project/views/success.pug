@@ -1,0 +1,66 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Registration Successful
+    link(rel="stylesheet" href="/assets/css/message.css")
+    link(rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+    
+  body
+    header
+      nav
+        .logo
+          img(src="./assets/images/logo.jpg" alt="Logo Image")
+          h2 LIVE SPORTS SCOREBOARD
+        ul
+          li
+            a(href="/register") Sign In
+          li
+            a(href="/login") Login
+
+    section.success-section
+      .success-container
+        h2 Registration Successful!
+        p Welcome, #{firstname}! Your registration was successful.
+        img(src="https://myecomz.com/en/img/emails/51-merchant-6-registration.png" alt="Success")
+        p#countdown You will be redirected to the login page in 10 seconds.
+        a.success-link(href="/home") Go to Home
+    footer
+      .footer-container
+        .footer-column
+          h3 Quick Links
+          ul
+            li
+              a(href="/index") Home
+            li
+              a(href="/teams") Teams
+            li
+              a(href="/fixtures") Fixtures
+            li
+              a(href="/scores") Live Scores
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              i(class="fab fa-facebook")
+            a(href="#")
+              i(class="fab fa-twitter")
+            a(href="#")
+              i(class="fab fa-instagram")
+            a(href="#")
+              i(class="fab fa-youtube")
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Stay updated with the latest scores and news!
+          form(action="" method="" onsubmit="")
+            input(type="email" name="email" placeholder="Enter your email" required)
+            button(type="submit") Subscribe
+      .copyright
+        p &copy; 2024 Live Sports Scoreboard. All rights reserved.
+
+    script(src="./assets/js/success.js")
+    script.
+      // Assuming first_name is dynamically passed from backend
+      document.getElementById('first_name').textContent = 'User'; // Replace 'User' dynamically with JS

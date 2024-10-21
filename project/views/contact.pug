@@ -1,0 +1,78 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+    link(rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css")
+    link(rel="stylesheet" href="/assets/css/home.css")
+    title Document
+  body
+    header
+      nav
+        .logo
+          img(src="./assets/images/logo.jpg" alt="Logo Image")
+          h2 LIVE SPORTS SCOREBOARD
+        .hamburger#hamburger
+          div
+          div
+          div
+        ul
+          li: a(href="/user/home") Home
+          li: a(href="/user/about") About Us
+          li: a(href="/user/service") Services
+          li: a(href="/user/contact") Contact
+          li: a(href="/user/dashboard") Dashboard
+          li: a(href="/user/logout") Logout
+
+    section.section#contact
+      .top-header
+        h1 Contact Us
+      .row
+        .col
+          .contact-info
+            h2 Find Me 
+              i.uil.uil-corner-right-down
+            p 
+              i.uil.uil-envelope Email: livesportsscoreboard@gmail.com
+            p 
+              i.uil.uil-phone Tel: +1234567890
+        .col
+          .form-control
+            .form-inputs
+              input.input-field(type="text" placeholder="Name")
+              input.input-field(type="text" placeholder="Email")
+            .text-area
+              textarea(placeholder="Message")
+            .form-button
+              button.btn Send  
+                i.uil.uil-message
+
+    footer
+      .footer-container
+        .footer-column
+          h3 Quick Links
+          ul
+            li: a(href="/index") Home
+            li: a(href="/teams") Teams
+            li: a(href="/fixtures") Fixtures
+            li: a(href="/scores") Live Scores
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              i.fab.fa-facebook
+            a(href="#")
+              i.fab.fa-twitter
+            a(href="#")
+              i.fab.fa-instagram
+            a(href="#")
+              i.fab.fa-youtube
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Stay updated with the latest scores and news!
+          form(action="" method="" onsubmit="")
+            input(type="email" name="email" placeholder="Enter your email" required)
+            button(type="submit") Subscribe
+      .copyright
+        p &copy; 2024 Live Sports Scoreboard. All rights reserved.

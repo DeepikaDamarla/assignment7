@@ -1,0 +1,266 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+.header {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: flex-start; /* Keep everything aligned to the left */
+    padding: 10px;
+    background-color: white;
+    color: black;
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+}
+
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between logo and links */
+}
+
+.logo img {
+    height: 60px; /* Adjust size as needed */
+}
+
+.header-title {
+    font-size: 20px;
+    text-align: right;
+}
+
+
+/* Toggle Button */
+.toggle-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-right: 15px;
+}
+
+.toggle-button:hover {
+    background-color: #004494;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    height: 100vh; /* Full height */
+    margin-top: 0px; /* Account for fixed header */
+    overflow: hidden; /* Remove extra scrollbar */
+}
+
+/* Sidebar */
+/* Initially hide the sidebar */
+.hidden {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+.sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    color: white;
+    transition: transform 0.3s ease;
+    padding: 20px; /* Add padding to the sidebar for better spacing */
+}
+
+.sidebar.active {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.sidebar .profile {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sidebar .profile img {
+    width: 100px; /* Adjust size of profile picture */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 15px 0; /* Add space between the list items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+    display: block; /* This ensures the links take up full width, aligning them vertically */
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #f39c12; /* Change hover color */
+}
+
+
+
+.main-content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.profile-info p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.edit-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Overlay styles */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+
+.overlay-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;    
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+/* Close button styling */
+.close-btn {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form styling */
+.registration-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.registration-section h2 {
+    color: #640D5F; /* Dark Purple */
+    margin-bottom: 20px;
+}
+
+.registration-form {
+    display: inline-block;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.registration-form input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.registration-form button {
+    padding: 10px 20px;
+    background-color: #D91656; /* Pinkish Red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.registration-form button:hover {
+    background-color: #EE66A6; /* Light Pink on hover */
+    color: black;
+}
+
+/* Links for login */
+.registration-links {
+    margin-top: 10px;
+}
+
+.registration-links a {
+    color: #D91656; /* Pinkish Red */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.registration-links a:hover {
+    text-decoration: underline;
+}

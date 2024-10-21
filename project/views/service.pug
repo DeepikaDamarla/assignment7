@@ -1,0 +1,103 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Services
+    link(rel="stylesheet" href="/assets/css/home.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+  body
+    header
+      nav
+        .logo
+          img(src="./assets/images/logo.jpg" alt="Logo Image")
+          h2 LIVE SPORTS SCOREBOARD
+        .hamburger#hamburger
+          div
+          div
+          div
+        ul#nav-links
+          li: a(href="/user/home") Home
+          li: a(href="/user/about") About Us
+          li: a(href="/user/service") Services
+          li: a(href="/user/contact") Contact
+          li: a(href="/user/dashboard") Dashboard
+          li: a(href="/user/logout") Logout
+        
+    main
+      section#services
+        h2 Our Services
+        .service-container
+          .service-item
+            .service-icon
+              i.fas.fa-tachometer-alt
+            .service-content
+              h3 Live Score Updates
+              p Get real-time updates on scores from various sports events. Stay connected to your favorite games!
+          .service-item
+            .service-icon
+              i.fas.fa-chart-bar
+            .service-content
+              h3 Match Statistics
+              p In-depth statistics for every match, including player performance, team stats, and more.
+          .service-item
+            .service-icon
+              i.fas.fa-bell
+            .service-content
+              h3 Alerts and Notifications
+              p Receive instant alerts for major events like goals, red cards, and match outcomes.
+          .service-item
+            .service-icon
+              i.fas.fa-users
+            .service-content
+              h3 Team Information
+              p Comprehensive information about teams, including line-ups, player stats, and recent performance.
+          .service-item
+            .service-icon
+              i.fas.fa-comment-dots
+            .service-content
+              h3 Live Commentary
+              p Follow the action with engaging live commentary for real-time updates and insights.
+          .service-item
+            .service-icon
+              i.fas.fa-globe
+            .service-content
+              h3 Multisport Coverage
+              p We provide updates and stats across a variety of sports, including football, basketball, and cricket.
+
+    footer
+      .footer-container
+        .footer-column
+          h3 Quick Links
+          ul
+            li: a(href="/index") Home
+            li: a(href="/teams") Teams
+            li: a(href="/fixtures") Fixtures
+            li: a(href="/scores") Live Scores
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              i.fab.fa-facebook
+            a(href="#")
+              i.fab.fa-twitter
+            a(href="#")
+              i.fab.fa-instagram
+            a(href="#")
+              i.fab.fa-youtube
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Stay updated with the latest scores and news!
+          form(action="" method="" onsubmit="")
+            input(type="email" name="email" placeholder="Enter your email" required)
+            button(type="submit") Subscribe
+      .copyright
+        p &copy; 2024 Live Sports Scoreboard. All rights reserved.
+
+    script.
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+      });

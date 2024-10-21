@@ -1,0 +1,213 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    
+    // Google Fonts
+    link(
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap",
+      rel="stylesheet"
+    )
+    
+    // Font Awesome
+    link(
+      rel="stylesheet",
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    )
+    
+    // Unicons
+    link(
+      rel="stylesheet",
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    )
+    
+    // Custom CSS
+    link(rel="stylesheet" href="/assets/css/home.css")
+    
+    title Home - Live Sports Scoreboard
+  
+  body
+    // Header Section
+    header
+      nav
+        .logo
+          img(src="/assets/images/logo.jpg" alt="Logo Image")
+          h2 LIVE SPORTS SCOREBOARD
+        .hamburger#hamburger
+          div
+          div
+          div
+        ul
+          li
+            a(href="#") Home
+          li
+            a(href="/user/about") About Us
+          li
+            a(href="/user/service") Services
+          li
+            a(href="/user/contact") Contact
+          li
+            a(href="/user/dashboard") Dashboard
+          li
+            a(href="/user/logout") Logout
+    
+    // Main Content
+    main
+      // Home Section
+      section#home.section
+        .main-container
+          // Left: Content Container
+          .content-container
+            h1 Welcome to Live Sports Scoreboard
+            p
+              | Experience the thrill of live sports with up-to-the-minute scores and game updates.Follow detailed statistics, including player performances and team standings. Get instant notifications for key moments and major plays.Stay engaged with comprehensive coverage of all your favorite sports events.Never miss a beat with our real-time alerts and in-depth game summaries.
+          
+          // Right: Image Slider
+          .img-slider
+            img.img.active(src="https://wallpaperdig.com/wp-content/uploads/2021/02/XDCFVBGNHJM.jpg" alt="Sports 1")
+            img.img(src="https://images.hdqwalls.com/download/basketball-hd-1366x768.jpg" alt="Basketball")
+            img.img(src="https://images.indianexpress.com/2024/01/Shuttle-1.jpg" alt="Shuttle")
+            img.img(src="https://ca-times.brightspotcdn.com/dims4/default/73dd15f/2147483647/strip/true/crop/1000x563+0+0/resize/1200x675!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fde%2Fe5%2F3184c1374efe8d09081eb7eecc4d%2Ffootball2.jpg" alt="Football")
+      
+      // Featured Sports Section
+      section#featured-sports.section
+        .top-header
+          h1 SPORTS
+        .grid-container
+          .grid-item
+            img(src="http://images.unsplash.com/photo-1576438162986-c685b1cfed7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mnx8YmFza2V0YmFsbCUyMG5ldHx8MHx8fHwxNjI4Nzc0MDQ4&ixlib=rb-1.2.1&q=80&w=1080.jpg" alt="Basketball")
+            a(href="/basketball") Basketball
+          .grid-item
+            img(src="https://tse1.mm.bing.net/th?id=OIP.qaPvkYymcO89p_Wkk55r6gHaHa&pid=Api&P=0&h=180.jpg" alt="Badminton")
+            a(href="/badminton") Badminton
+          .grid-item
+            img(src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-1.2.1&w=1000&q=80.jpg" alt="Football")
+            a(href="/football") Football
+          .grid-item
+            img(src="https://tse1.mm.bing.net/th?id=OIP.3qG1H3PmTRkqjLIcF5Cb1AHaNK&pid=Api&P=0&h=180.jpg" alt="Cricket")
+            a(href="/cricket") Cricket
+      
+      // Reviews Section
+      section.review#reviews
+        .top-header
+          h1 User's 
+            span review
+        .box-container
+          .box
+            p "The live sports scorecard is incredibly easy to use and updates scores in real-time. 
+               It keeps me informed with all the game stats quickly and efficiently. A must-have for any sports fan!"
+            img.user(src="https://media.istockphoto.com/id/961391432/photo/girl-are-sitting-outdoor-with-mobile-phone-and-enjoying-in-beautiful-day.jpg?s=612x612&w=0&k=20&c=_H1kIZWSpzrRLxIPcZa3uz_E6EEvTJo-SfXzRti8TDU=" alt="Sandy")
+            h3 Sandy
+            .stars
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star-half-alt
+              i.fas.fa-star-full-alt
+          .box
+            p "I love how easy it is to follow live games with this scorecard. It’s accurate, quick, and makes tracking scores effortless!"
+            img.user(src="https://t3.ftcdn.net/jpg/06/50/56/80/360_F_650568058_q6KruAvlT4w7RahAGwIwgIY8ZjIkGAYg.jpg" alt="Thomas")
+            h3 Thomas
+            .stars
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+          .box
+            p "The live sports scorecard gives real-time updates and keeps me in the loop with all the action. It's simple, fast, and reliable—perfect for any sports enthusiast!"
+            img.user(src="https://www.shutterstock.com/image-photo/online-education-concept-young-beautiful-260nw-2032979636.jpg" alt="Tessa")
+            h3 Tessa
+            .stars
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star-half-alt
+    
+    // Footer Section
+    footer
+      .footer-container
+        .footer-column
+          h3 Quick Links
+          ul
+            li
+              a(href="/index") Home
+            li
+              a(href="/teams") Teams
+            li
+              a(href="/fixtures") Fixtures
+            li
+              a(href="/scores") Live Scores
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              i.fab.fa-facebook
+            a(href="#")
+              i.fab.fa-twitter
+            a(href="#")
+              i.fab.fa-instagram
+            a(href="#")
+              i.fab.fa-youtube
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Stay updated with the latest scores and news!
+          form(action="" method="" onsubmit="")
+            input(type="email" name="email" placeholder="Enter your email" required)
+            button(type="submit") Subscribe
+      .copyright
+        p &copy; 2024 Live Sports Scoreboard. All rights reserved.
+    
+    // Scripts
+    script(src="https://unpkg.com/scrollreveal")
+    script.
+      // Image Slider
+      let currentIndex = 0;
+      const images = document.querySelectorAll('.img-slider img');
+      const totalImages = images.length;
+
+      function showNextImage() {
+          images[currentIndex].classList.remove('active');
+          currentIndex = (currentIndex + 1) % totalImages;
+          images[currentIndex].classList.add('active');
+      }
+
+      // Automatically switch images every 2 seconds
+      setInterval(showNextImage, 2000);
+
+      // Hamburger menu toggle
+      const hamburger = document.getElementById('hamburger');
+      const navUl = document.querySelector('nav ul');
+
+      hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          navUl.classList.toggle('active');
+      });
+
+      // ScrollReveal Animations
+      const sr = ScrollReveal({
+        origin: 'top',
+        distance: '80px',
+        duration: 2000,
+        reset: true
+      });
+      sr.reveal('.top-header', {});
+      
+      const srLeft = ScrollReveal({
+        origin: 'left',
+        distance: '80px',
+        duration: 2000,
+        reset: true
+      });
+      srLeft.reveal('.contact-info', { delay: 100 });
+      srLeft.reveal('.content-container', { delay: 100 });
+
+      const srRight = ScrollReveal({
+        origin: 'right',
+        distance: '80px',
+        duration: 2000,
+        reset: true
+      });
+      srRight.reveal('.form-control', { delay: 100 });

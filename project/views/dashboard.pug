@@ -1,0 +1,162 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Sports Dashboard
+    link(rel="stylesheet" href="/assets/css/dashboard.css")
+  body
+    // Header
+    header
+      .header
+        button.toggle-button(onclick="toggleSidebar()") ☰
+        div.title Live Sports Scoreboard
+        
+
+    .dashboard-container
+      // Sidebar
+      aside.sidebar.deActive.hidden#sidebar
+        .profile
+          img(src="https://c8.alamy.com/zooms/9/9d75d3fcb40441a39876692eed1f0c21/tc2fpe.jpg" alt="Profile Picture")
+          h2 #{user.firstname}
+        nav
+          ul
+           
+            li: a(href="/user/home") Home
+            li: a(href="/user/contact") Contact Us
+            li: a(href="/user/about") About Us
+            li: a(href="/user/service") Services            
+            li: a(href="/user/profile") My Profile            
+            li: a(href="/user/logout") Log out
+        .fav-section
+          h3 Favourite League
+          ul
+            li: a(href="#") Premier League
+            li: a(href="#") I-League
+            li: a(href="#") Laliga
+          h3 Favourite Club
+          ul
+            li: a(href="#") TSG 1899 Hoffenheim
+
+      // Main Content
+      main.main-content
+        .hero-card
+          .match-info
+           
+           
+            h1 Welcome back #{user.firstname}!          
+
+        h2 Watch History
+        // Sports History Section
+        .match-card-container
+          // Match 1: Upcoming Match
+          .match-card
+            .team
+              img.team-logo(src="https://tse2.mm.bing.net/th?id=OIP.fwVILb_UfE_4qd6hUHieygHaEo&pid=Api&P=0&h=180" alt="Lakers Logo")
+              h4 Lakers
+              span vs
+              h4 Warriors
+              img.team-logo(src="https://image.freepik.com/free-vector/warrior-armor-sports-gaming-logo-mascot_71003-170.jpg" alt="Warriors Logo")
+            .match-details
+              p.date(strong Date:) 30th September 2024
+              p.venue(strong Venue:) Staples Center, Los Angeles
+              p.status(strong Status:) Upcoming
+              p(strong Score:) Warriors: 120, Lakers: 97
+              p.winner(strong Winner:) Warriors
+
+          // Match 2: Ongoing Match
+          .match-card
+            .team
+              img.team-logo(src="https://tse2.mm.bing.net/th?id=OIP.fwVILb_UfE_4qd6hUHieygHaEo&pid=Api&P=0&h=180" alt="Lakers Logo")
+              h4 Lakers
+              span vs
+              h4 Celtics
+              img.team-logo(src="https://tse3.mm.bing.net/th?id=OIP.za5GCuQN0DRf4ruOQx4t9gHaEo&pid=Api&P=0&h=180" alt="Celtics Logo")
+            .match-details
+              p(strong Date:) 10th October 2024
+              p(strong Venue:) TD Garden, Boston
+              p(strong Status:) Ongoing
+              p(strong Score:) Celtics: 112, Lakers: 97
+              p.winner(strong Winner:) Celtics
+
+          // Match 3: Completed Match
+          .match-card
+            .team
+              img.team-logo(src="https://tse2.mm.bing.net/th?id=OIP.fwVILb_UfE_4qd6hUHieygHaEo&pid=Api&P=0&h=180" alt="Lakers Logo")
+              h4 Lakers
+              span vs
+              h4 Heat
+              img.team-logo(src="https://tse1.mm.bing.net/th?id=OIP.WO8ywxIdaQgKUby_6VK5qQHaE8&pid=Api&P=0&h=180" alt="Heat Logo")
+            .match-details
+              p(strong Date:) 15th November 2024
+              p(strong Venue:) American Airlines Arena, Miami
+              p(strong Status:) Completed
+              p(strong Score:) Lakers: 102, Heat: 97
+              p.winner(strong Winner:) Lakers
+
+        // Upcoming Matches Section
+        .upcoming-matches-wrapper
+          h3 Upcoming Matches
+          .upcoming-matches-container
+            .match-card
+              .team
+                img.team-logo(src="https://tse2.mm.bing.net/th?id=OIP.fwVILb_UfE_4qd6hUHieygHaEo&pid=Api&P=0&h=180" alt="Lakers Logo")
+                h4 Lakers
+                span vs
+                h4 Celtics
+                img.team-logo(src="https://tse3.mm.bing.net/th?id=OIP.za5GCuQN0DRf4ruOQx4t9gHaEo&pid=Api&P=0&h=180" alt="Celtics Logo")
+              .match-time
+                p 5:00 PM
+              button.remove-button Remove
+
+            .match-card
+              .team
+                img.team-logo(src="https://tse2.mm.bing.net/th?id=OIP.fwVILb_UfE_4qd6hUHieygHaEo&pid=Api&P=0&h=180" alt="Lakers Logo")
+                h4 Lakers
+                span vs
+                h4 Celtics
+                img.team-logo(src="https://tse3.mm.bing.net/th?id=OIP.za5GCuQN0DRf4ruOQx4t9gHaEo&pid=Api&P=0&h=180" alt="Celtics Logo")
+              .match-time
+                p 7:00 PM
+              button.remove-button Remove
+
+            .match-card
+              .team
+                img.team-logo(src="https://tse2.mm.bing.net/th?id=OIP.fwVILb_UfE_4qd6hUHieygHaEo&pid=Api&P=0&h=180" alt="Lakers Logo")
+                h4 Lakers
+                span vs
+                h4 Celtics
+                img.team-logo(src="https://tse3.mm.bing.net/th?id=OIP.za5GCuQN0DRf4ruOQx4t9gHaEo&pid=Api&P=0&h=180" alt="Celtics Logo")
+              .match-time
+                p 9:00 PM
+              button.remove-button Remove
+    footer
+      .footer-container
+        .footer-column
+          h3 Quick Links
+          ul
+            li: a(href="/index") Home
+            li: a(href="/teams") Teams
+            li: a(href="/fixtures") Fixtures
+            li: a(href="/scores") Live Scores
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              i.fab.fa-facebook
+            a(href="#")
+              i.fab.fa-twitter
+            a(href="#")
+              i.fab.fa-instagram
+            a(href="#")
+              i.fab.fa-youtube
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Stay updated with the latest scores and news!
+          form(action="" method="" onsubmit="")
+            input(type="email" name="email" placeholder="Enter your email" required)
+            button(type="submit") Subscribe
+      .copyright
+        p &copy; 2024 Live Sports Scoreboard. All rights reserved.
+
+    script(src="/assets/js/dashboard.js")

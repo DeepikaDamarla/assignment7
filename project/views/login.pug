@@ -1,0 +1,77 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Login Form
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+    link(rel="stylesheet" href="/assets/css/login.css")
+  
+  header
+    nav
+      .logo
+        img(src="./assets/images/logo.jpg" alt="Logo Image")
+        h2 LIVE SPORTS SCOREBOARD
+      ul
+        li
+          a(href="/register") Sign In
+        li
+          a(href="/login") Login
+
+  body
+    main
+      .wrapper
+        form#loginForm(action="/user/login" method="post")
+          h1 Login
+          .input
+            label(for="username") Username
+            div
+              i(class="fas fa-user")
+              input(type="text" id="username" name="username" placeholder="Username" required)
+            label(for="password") Password
+            div
+              i(class="fas fa-lock")
+              input(type="password" id="password" name = "password" placeholder="Password" required)
+          .remember
+            label
+              input(type="checkbox") 
+              |  Remember me
+            label
+              a(href="#") Forgot Password?
+          button(type="submit") Login
+          .register
+            p Don't have an account? 
+              a(href="/register") Register
+
+    footer
+      .footer-container
+        .footer-column
+          h3 Quick Links
+          ul
+            li
+              a(href="/index") Home
+            li
+              a(href="/teams") Teams
+            li
+              a(href="/fixtures") Fixtures
+            li
+              a(href="/scores") Live Scores
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              i(class="fab fa-facebook")
+            a(href="#")
+              i(class="fab fa-twitter")
+            a(href="#")
+              i(class="fab fa-instagram")
+            a(href="#")
+              i(class="fab fa-youtube")
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Stay updated with the latest scores and news!
+          form(action="" method="" onsubmit="")
+            input(type="email" name="email" placeholder="Enter your email" required)
+            button(type="submit") Subscribe
+      .copyright
+        p &copy; 2024 Live Sports Scoreboard. All rights reserved.

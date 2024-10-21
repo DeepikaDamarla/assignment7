@@ -1,0 +1,77 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title about us
+    link(rel="stylesheet" href="/assets/css/home.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+  body
+    header
+      nav
+        .logo
+          img(src="./assets/images/logo.jpg" alt="Logo Image")
+          h2 LIVE SPORTS SCOREBOARD
+        .hamburger#hamburger
+          div
+          div
+          div
+        ul#nav-links
+          li: a(href="/user/home") Home
+          li: a(href="/user/about") About Us
+          li: a(href="/user/service") Services
+          li: a(href="/user/contact") Contact
+          li: a(href="/user/dashboard") Dashboard
+          li: a(href="/user/logout") Logout
+
+    main
+      section#about-us
+        .about-card
+          h2 About Us
+          | At 
+          strong Live Sports Scoreboard
+          | , we understand the passion that fans 
+          | have for their favorite sports. Our platform not only provides real-time updates but also 
+          | offers in-depth analyses, player statistics, and interactive features that enhance the viewing experience. 
+          | Whether you're following a 
+          i nail-biting cricket match, a thrilling football game, or an intense basketball showdown
+          | , we strive to keep you informed and engaged every step of the way. Join our community of 
+          b sports 
+          | enthusiasts and never miss a moment of the action!
+
+    footer
+      .footer-container
+        .footer-column
+          h3 Quick Links
+          ul
+            li: a(href="/index") Home
+            li: a(href="/teams") Teams
+            li: a(href="/fixtures") Fixtures
+            li: a(href="/scores") Live Scores
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              i.fab.fa-facebook
+            a(href="#")
+              i.fab.fa-twitter
+            a(href="#")
+              i.fab.fa-instagram
+            a(href="#")
+              i.fab.fa-youtube
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Stay updated with the latest scores and news!
+          form(action="" method="" onsubmit="")
+            input(type="email" name="email" placeholder="Enter your email" required)
+            button(type="submit") Subscribe
+      .copyright
+        p &copy; 2024 Live Sports Scoreboard. All rights reserved.
+
+    script.
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+      });

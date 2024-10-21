@@ -1,0 +1,134 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    
+    // Google Fonts
+    link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Poppins:wght@400;500;600;700&family=Dancing+Script:wght@400;700&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet")
+
+    // Icon Libraries
+    link(rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+    link(rel="stylesheet" href="/assets/css/style.css")
+
+    title Live Sports Scoreboard
+
+  body
+    // Header Section
+    header
+      nav
+        .logo
+          img(src="./assets/images/logo.jpg" alt="Logo Image")
+          h2 LIVE SPORTS SCOREBOARD
+        ul
+          li
+            a(href="/register") Sign In
+          li
+            a(href="/login") Login
+    
+    // Slider Section
+    .slider
+      .slides
+        .slide.active
+          img(src="https://images.unsplash.com/photo-1519861531473-9200262188bf?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" alt="Basketball")
+          .slide-content
+            h1 Basketball Live Scores
+            p Get real-time updates on basketball games from around the world. Track scores, player statistics, and team performances instantly.
+        .slide
+          img(src="https://wallpapers.com/images/hd/badminton-white-shuttlecock-reflection-tyoakw8cc3iuqjdo.jpg" alt="Badminton")
+          .slide-content
+            h1 Badminton Live Scores
+            p Stay informed with live badminton scores. Monitor match progress, player rankings, and detailed game analyses.
+        .slide
+          img(src="https://wallpaperaccess.com/full/562943.jpg" alt="Football")
+          .slide-content
+            h1 Football Live Scores
+            p Receive instant football scores from major leagues and tournaments. Follow your favorite teams and players with comprehensive statistics.
+        .slide
+          img(src="https://wallpaperaccess.com/full/4650728.jpg" alt="Cricket")
+          .slide-content
+            h1 Cricket Live Scores
+            p Access live cricket scores, match summaries, and detailed player performances. Stay updated on Test, ODI, and T20 matches.
+      
+      // Navigation Buttons
+      button.prev(onclick="moveSlide(-1)" aria-label="Previous Slide") &#10094;
+      button.next(onclick="moveSlide(1)" aria-label="Next Slide") &#10095;
+
+    // Services Section
+    section#services
+      h2 Our Services
+      .service-container
+        .service-item
+          .service-icon
+            i.fas.fa-tachometer-alt
+          .service-content
+            h3 Live Score Updates
+            p Get real-time updates on scores from various sports events. Stay connected to your favorite games!
+        .service-item
+          .service-icon
+            i.fas.fa-chart-bar
+          .service-content
+            h3 Match Statistics
+            p In-depth statistics for every match, including player performance, team stats, and more.
+        .service-item
+          .service-icon
+            i.fas.fa-bell
+          .service-content
+            h3 Alerts and Notifications
+            p Receive instant alerts for major events like goals, red cards, and match outcomes.
+        .service-item
+          .service-icon
+            i.fas.fa-users
+          .service-content
+            h3 Team Information
+            p Comprehensive information about teams, including line-ups, player stats, and recent performance.
+        .service-item
+          .service-icon
+            i.fas.fa-comment-dots
+          .service-content
+            h3 Live Commentary
+            p Follow the action with engaging live commentary for real-time updates and insights.
+        .service-item
+          .service-icon
+            i.fas.fa-globe
+          .service-content
+            h3 Multisport Coverage
+            p We provide updates and stats across a variety of sports, including football, basketball, and cricket.
+
+    // Footer Section
+    footer
+      .footer-container
+        .footer-column
+          h3 Quick Links
+          ul
+            li
+              a(href="/index") Home
+            li
+              a(href="/teams") Teams
+            li
+              a(href="/fixtures") Fixtures
+            li
+              a(href="/scores") Live Scores
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              i.fab.fa-facebook
+            a(href="#")
+              i.fab.fa-twitter
+            a(href="#")
+              i.fab.fa-instagram
+            a(href="#")
+              i.fab.fa-youtube
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Stay updated with the latest scores and news!
+          form(action="" method="" onsubmit="")
+            input(type="email" name="email" placeholder="Enter your email" required)
+            button(type="submit") Subscribe
+
+      .copyright
+        p &copy; 2024 Live Sports Scoreboard. All rights reserved.
+    
+    script(src="./assets/js/index.js")
